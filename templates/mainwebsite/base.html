@@ -31,7 +31,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'mainwebsite/css/style.css' %}" rel="stylesheet">
-  {% block internal_css %} {% endblock %}
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -48,10 +48,10 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="{{homepage}}"><a href="/#home">Home</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#services">Services</a></li>
-          <li><a href="/#team">Team</a></li>
+          <li class="{{homepage}}"><a href="{% url 'mainwebsite:index'%}#home">Home</a></li>
+          <li class="{{about}}"><a href="/#about">About</a></li>
+          <li class="{{services}}"><a href="/#services">Services</a></li>
+          <li class="{{careers}}"><a href="{% url 'mainwebsite:careers'%}">Careers</a></li>
           <li class="{{contactus}}"><a href="{% url 'mainwebsite:contactus' %}">Contact</a></li>
 
         </ul>
