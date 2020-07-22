@@ -15,8 +15,17 @@ def contactus(request):
     return render(request,template_name,{"contactus":"active"})
 
 def services(request):
-    template_name = "mainwebsite/blog.html"
-    return render(request,template_name,{"contactus":"active"})
+    # template_name = "mainwebsite/blog.html"
+    template_name = "mainwebsite/services.html"
+    return render(request,template_name,{"services":"active"})
+
+def about(request):
+    template_name = "mainwebsite/about.html"
+    return render(request,template_name,{"about":"active"})
+
+def careers(request):
+    template_name = "mainwebsite/careers.html"
+    return render(request,template_name,{"careers":"active"})
 
 def sendquery(request):
     if request.method == 'POST':

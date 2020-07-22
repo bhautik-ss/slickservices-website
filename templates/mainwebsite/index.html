@@ -114,39 +114,6 @@
   </div><!-- End Slider -->
   {% endblock %}
 
-  {% block internal_css %}
-  <style>
-    /*
-    flip card
-    */
-  
-    .card-flip > div > div {
-      backface-visibility: hidden;
-      transition: transform 300ms;
-      transition-timing-function: linear;
-      width: auto;
-      height: auto;
-      margin: 0;
-      display: flex;
-    }
-    .card-front{
-      transform: rotateY(0deg);
-    }
-    .card-back{
-      transform: rotateY(180deg);
-      position: absolute;
-      top:0;
-    }
-    .card-flip:hover .card-front{
-      transform: rotateY(-180deg);
-    }
-    .card-flip:hover .card-back{
-      transform: rotateY(0deg);
-    }
-  </style>
-  
-  {% endblock %}
-
   {% block main %}
     <!-- ======= About Section ======= -->
     <div id="about" class="about-area area-padding">
@@ -196,6 +163,11 @@
           </div>
           <!-- End col-->
         </div>
+        <div class="single-blog text-center">
+          <span>
+            <a href="{% url 'mainwebsite:about' %}" class="ready-btn">Read more</a>
+          </span>
+        </div>
       </div>
     </div><!-- End About Section -->
 
@@ -211,9 +183,9 @@
         </div>
         <div class="row text-center ">
           <!-- Start Left services -->
-          <div class="card-flip col-md-4 col-sm-4 col-xs-12">
+          <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="about-move">
-              <div class="card card-front services-details">
+              <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" href="#">
                     <i class="fa fa-dashboard"></i>
@@ -223,33 +195,11 @@
                     
                     Slick Services provide a great arrangement that joins all the highlights you may require in venture the executive's device: ventures and assignments, contact the board, cites, group coordinated effort, charging, and detailing.
                   </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            
-              <div class="card card-back services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-                    <i class="fa fa-dashboard"></i>
-                  </a>
-                  <h4>Top Features of our Tool</h4>
-                  <p>
-                    <ol style="list-style-type:disc;text-align: left!important;">
-                      <li>Projects with sub-tasks and deadlines</li>
-                      <li>Real-time dashboard</li>
-                      <li>Shared team calendar & meeting scheduling</li>
-                      <li>Contact management</li>
-                      <li>Time tracking and billing for work</li>
-                      <li>Detailed reports on project progress and finances</li>
-                      <li>Quoting and invoicing with pre-set templates</li>
-                      <li>Assigned user roles</li>
-                      <li>Online team discussions and chats</li>
-                      <li>Task delegating and assignments</li>
-                      <li>Secure file storage</li>
-                      <li>Email and desktop notifications</li>
-                    </ol>
-                    <b>What's uncommon:</b>Slick Services assists with smoothing out your whole work progress, so you don't have to utilize a variety of instruments for each undertaking. All your significant data is put away in one focal spot. It lets clients make visual management dashboards that can be redone as indicated by close to home inclinations. It's an incredible method to get a snappy outline of your up and coming work and your group's outcomes.
-                  </p>
+                  <div class="single-blog">
+                    <span>
+                      <a href="{% url 'mainwebsite:services' %}#project-management-tool" class="ready-btn">Read more</a>
+                    </span>
+                  </div>
                 </div>
               </div>
               <!-- end about-details -->
@@ -266,6 +216,11 @@
                   <p>
                     Our Panel management tools assist organizations with making a modified gateway for their panel. Utilizing this product makes it simple for organizations to select the section and keep up their panels.   
                   </p>
+                  <div class="single-blog">
+                    <span>
+                      <a href="{% url 'mainwebsite:services' %}#panel-web-application" class="ready-btn">Read more</a>
+                    </span>
+                  </div>
                 </div>
               </div>
               <!-- end about-details -->
@@ -283,6 +238,11 @@
                   <p>
                     Custom web development administrations are the center of our business. Directed by heads of advancements, they exceed expectations in building current and future-verification web applications – customized to the necessities of end-clients, intended to arrive at your business objectives. 
                   </p>
+                  <div class="single-blog">
+                    <span>
+                      <a href="{% url 'mainwebsite:services' %}#customized-web-appication" class="ready-btn">Read more</a>
+                    </span>
+                  </div>
                 </div>
               </div>
               <!-- end about-details -->
@@ -300,6 +260,11 @@
                   <p>
                     With our dominance joined with rich experience and access to bleeding-edge survey programming mechanical assemblies, we can profitably make changed, complex surveys in accordance with your requesting requirements.
                   </p>
+                  <div class="single-blog">
+                    <span>
+                      <a href="{% url 'mainwebsite:services' %}#market-research-survey-programming" class="ready-btn">Read more</a>
+                    </span>
+                  </div>
                 </div>
               </div>
               <!-- end about-details -->
@@ -318,6 +283,11 @@
                   <p>
                     Our data processing team helps in effectively managing the data collected using different medium and then compile it to derive meaningful insights. Our team is experienced on diverse platforms such as Quantum, SPSS, Wincross, and many more.
                   </p>
+                  <div class="single-blog">
+                    <span>
+                      <a href="{% url 'mainwebsite:services' %}#market-research-data-analysis-and-tabulation" class="ready-btn">Read more</a>
+                    </span>
+                  </div>
                 </div>
               </div>
               <!-- end about-details -->
@@ -336,17 +306,22 @@
                   <p>
                     We can run your flags and tables utilizing an assortment of programming alternatives, giving us better adaptability to meet your tabulation needs. We make a special effort to guarantee that our distinct and measurable investigations satisfy your determinations. 
                   </p>
+                  <div class="single-blog">
+                    <span>
+                      <a href="{% url 'mainwebsite:services' %}#market-research-data-analysis-and-tabulation" class="ready-btn">Read more</a>
+                    </span>
+                  </div>
                 </div>
               </div>
               <!-- end about-details -->
             </div>
           </div>
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
+        <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
           <div class="suscribe-text text-center">
-            <a class="ready-btn" href="{% url 'mainwebsite:contactus' %}">In Brief</a>
+            <a class="ready-btn" href="{% url 'mainwebsite:services' %}">In Brief</a>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     
